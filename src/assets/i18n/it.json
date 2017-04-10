@@ -1,0 +1,12 @@
+{
+    "key" : "Traduzione per chiave",   
+    "HELLO": "Salutamm",
+    "BENVENUTO": "Benvenuto",
+    "ORDINA": "Ordina",
+    "MESSAGGIO_HOME" : "I dati utilizzati sono puramente di esempio e vengono utilizzati solo per una dimostrazione",
+    "nested" : {    
+        "user": "Utente",
+        "signIn": "Entra",
+        "signUp": "Registrati"
+    }
+}

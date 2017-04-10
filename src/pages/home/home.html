@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Mezzi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button color="danger" (click)="logout()">Logout
+    </button>
+
+<h1 *ngIf="!mezzoOccupato">Scegli un mezzo disponibile</h1>
+<h1 *ngIf="mezzoOccupato">Abbandona mezzo</h1>
+
+<ion-content>
+
+
+
+<ion-list *ngIf="!mezzoOccupato">
+  <ion-item *ngFor="let item of mezziDisponibili | async">
+    <ion-thumbnail item-left>
+      <img *ngIf="item.tipologia == 'PB'" src="assets/mezzi/PB.jpg">
+      <img *ngIf="item.tipologia == 'PN'" src="assets/mezzi/PN.jpg">
+      <img *ngIf="item.tipologia == 'S'" src="assets/mezzi/S.jpg">
+      <img *ngIf="item.tipologia == 'B'" src="assets/mezzi/B.jpg">
+    </ion-thumbnail>
+    <h2>{{ item.nome }}  </h2>
+
+    <button ion-button clear item-right (click)="itemSelected(item.$key)">prendi</button>
+  </ion-item>
+</ion-list>
+
+
+<p *ngIf="mezzoOccupato" align="center">
+	Mezzo associato: {{mezzoGuidato }}
+</p>
+  <p *ngIf="mezzoOccupato" align="center">
+    <button ion-button color="secondary" (click)="abbandona(idenMezzo)">Abbandona
+    </button>
+  </p>
+ 
+
+
+</ion-content>
+
+</ion-content>

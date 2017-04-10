@@ -1,0 +1,24 @@
+<!--
+  Generated template for the DettaglioCliente page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>dettaglioCliente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+			
+			 <p>{{ (cliente | async)?.nome  }}</p>
+			 <p>{{ (cliente | async)?.cognome  }}</p>
+			 <p>{{ (cliente | async)?.indirizzo  }}</p>
+			 <p>{{ (cliente | async)?.dataNascita  }}</p>
+			 <p>{{ (cliente | async)?.sesso  }}</p>
+		
+</ion-content>
